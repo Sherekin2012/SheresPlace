@@ -170,6 +170,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\ProductManagerController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -235,9 +236,12 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\ProductManager\Index.cshtml" />
+    <Content Include="Views\ProductManager\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Data\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -251,6 +255,24 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SherePlace.DataAccess.InMemory\SherePlace.DataAccess.InMemory.csproj">
+      <Project>{c30b0fe4-5913-4e7a-844c-40bf94cc6445}</Project>
+      <Name>SherePlace.DataAccess.InMemory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SheresPlace.Core\SheresPlace.Core.csproj">
+      <Project>{81ff17e8-9177-490c-8533-4288fe3fac7f}</Project>
+      <Name>SheresPlace.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SheresPlace.DataAccess.SQL\SheresPlace.DataAccess.SQL.csproj">
+      <Project>{aaa75402-dff2-47e1-bd4b-5eb21aab5267}</Project>
+      <Name>SheresPlace.DataAccess.SQL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SheresPlace.Services\SheresPlace.Services.csproj">
+      <Project>{430e8771-4113-46fa-bfcc-34188d37c93e}</Project>
+      <Name>SheresPlace.Services</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
