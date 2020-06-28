@@ -1,4 +1,5 @@
-﻿using SherePlace.DataAccess.InMemory;
+﻿using SherePlace.Core.Contracts;
+using SherePlace.DataAccess.InMemory;
 using SheresPlace.Core.Models;
 using System;
 using System.Collections.Generic;
@@ -10,12 +11,12 @@ namespace SheresPlace.WebUI.Controllers
 {
     public class ProductCategoryManagerController : Controller
     {
-        InMemoryRepository<ProductCategory> context;
+        IRepository<ProductCategory> context;
 
-        public ProductCategoryManagerController()
+        public ProductCategoryManagerController(IRepository<ProductCategory> context)
         {
 
-            context = new InMemoryRepository<ProductCategory>();
+            this.context = context;
         }
             
         // GET: ProductManager
