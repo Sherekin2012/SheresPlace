@@ -8,13 +8,13 @@ using SheresPlace.Core.Models;
 
 namespace SherePlace.DataAccess.InMemory
 {
-    public class ProductRepository
+    public class InMemoryRepository
     {
         ObjectCache cache = MemoryCache.Default;
         List<Product> products;
 
 
-        public ProductRepository()
+        public InMemoryRepository()
         {
             products = cache["products"] as List<Product>;
             if (products==null)
